@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KPOKAN Gomez — Monteur vidéo professionnel spécialisé en motion design, publicités digitales et documentaires cinématographiques." />
+  <title>KPOKAN Gomez — Video Editor & Motion Designer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CURSOR PERSONNALISÉ
+  ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-text">KG</span>
+      <span class="nav__logo-line"></span>
+    </div>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#about" class="nav__link">À propos</a></li>
+      <li><a href="#expertise" class="nav__link">Expertise</a></li>
+      <li><a href="#work" class="nav__link">Travaux</a></li>
+      <li><a href="#process" class="nav__link">Process</a></li>
+      <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__scanline"></div>
+    </div>
+
+    <div class="hero__inner">
+
+      <!-- Colonne gauche : texte -->
+      <div class="hero__content">
+        <p class="hero__tag animate-in" style="--delay: 0.1s">Motion · Advertising · Documentary</p>
+
+        <h1 class="hero__title animate-in" style="--delay: 0.3s">
+          <span class="hero__title-line">KPOKAN</span>
+          <span class="hero__title-line hero__title-line--accent">Gomez</span>
+        </h1>
+
+        <p class="hero__subtitle animate-in" style="--delay: 0.5s">
+          Monteur vidéo &amp; Directeur créatif.<br />
+          Je transforme la vision en <em>impact mesurable</em>.
+        </p>
+
+        <div class="hero__actions animate-in" style="--delay: 0.7s">
+          <a href="#work" class="btn btn--primary">Voir les réalisations</a>
+          <a href="#contact" class="btn btn--ghost">Démarrer un projet</a>
+        </div>
+
+        <!-- Statistiques avec compteurs animés -->
+        <div class="hero__stats animate-in" style="--delay: 0.9s">
+          <div class="stat">
+            <span class="stat__number counter" data-target="1" data-suffix="+">0</span>
+            <span class="stat__label">An d'expérience</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__number counter" data-target="20" data-suffix="+">0</span>
+            <span class="stat__label">Projets livrés</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__number counter" data-target="10" data-suffix="+">0</span>
+            <span class="stat__label">Clients satisfaits</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : photo -->
+      <div class="hero__photo animate-in" style="--delay: 0.4s">
+        <div class="hero__photo-frame">
+          <div class="hero__photo-corner hero__photo-corner--tl"></div>
+          <div class="hero__photo-corner hero__photo-corner--tr"></div>
+          <div class="hero__photo-corner hero__photo-corner--bl"></div>
+          <div class="hero__photo-corner hero__photo-corner--br"></div>
+          <img src="photo.jpg" alt="KPOKAN Gomez — Monteur vidéo" class="hero__photo-img" />
+          <div class="hero__photo-overlay"></div>
+        </div>
+        <!-- Badge flottant -->
+        <div class="hero__photo-badge">
+          <span class="hero__photo-badge-dot"></span>
+          Disponible
+        </div>
+      </div>
+
+    </div><!-- /.hero__inner -->
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll">
+      <span class="hero__scroll-label">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       TICKER (bandeau défilant)
+  ============================================================ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Motion Design</span>
+      <span class="ticker__dot">✦</span>
+      <span>Publicités Digitales</span>
+      <span class="ticker__dot">✦</span>
+      <span>Documentaires</span>
+      <span class="ticker__dot">✦</span>
+      <span>Color Grading</span>
+      <span class="ticker__dot">✦</span>
+      <span>VFX Compositing</span>
+      <span class="ticker__dot">✦</span>
+      <span>Storytelling Cinématique</span>
+      <span class="ticker__dot">✦</span>
+      <span>Brand Films</span>
+      <span class="ticker__dot">✦</span>
+      <span>Motion Design</span>
+      <span class="ticker__dot">✦</span>
+      <span>Publicités Digitales</span>
+      <span class="ticker__dot">✦</span>
+      <span>Documentaires</span>
+      <span class="ticker__dot">✦</span>
+      <span>Color Grading</span>
+      <span class="ticker__dot">✦</span>
+      <span>VFX Compositing</span>
+      <span class="ticker__dot">✦</span>
+      <span>Storytelling Cinématique</span>
+      <span class="ticker__dot">✦</span>
+      <span>Brand Films</span>
+      <span class="ticker__dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       À PROPOS
+  ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+
+        <!-- Portrait / image stylisée -->
+        <div class="about__visual">
+          <div class="about__frame">
+            <div class="about__frame-corner about__frame-corner--tl"></div>
+            <div class="about__frame-corner about__frame-corner--tr"></div>
+            <div class="about__frame-corner about__frame-corner--bl"></div>
+            <div class="about__frame-corner about__frame-corner--br"></div>
+            <div class="about__avatar">
+              <!-- Photo de profil -->
+              <img src="photo.jpg" alt="KPOKAN Gomez — Monteur vidéo" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+              <div class="about__avatar-glow"></div>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-dot"></span>
+            Disponible pour nouveaux projets
+          </div>
+        </div>
+
+        <!-- Texte -->
+        <div class="about__content">
+          <p class="section__tag">— À propos</p>
+          <h2 class="section__title">
+            Chaque coupe est<br />une <span class="accent">décision</span>.
+          </h2>
+          <p class="about__body">
+            Monteur vidéo basé à Abomey-Calavi, Bénin, je conçois des contenus vidéo 
+            qui ne se contentent pas d'informer — ils convertissent, émeuvent et restent en mémoire.
+            Depuis 1 an, je développe une maîtrise exigeante du montage vidéo avec une vision 
+            claire : chaque projet est une opportunité de raconter quelque chose de fort.
+          </p>
+          <p class="about__body">
+            Ma philosophie repose sur la précision rythmique : chaque frame, chaque transition, 
+            chaque son est au service du message. Je collabore avec des créateurs, des marques 
+            et des entrepreneurs pour produire des visuels qui performent autant qu'ils impressionnent.
+          </p>
+
+          <!-- Outils -->
+          <div class="about__tools">
+            <p class="about__tools-label">Outils maîtrisés</p>
+            <div class="about__tools-list">
+              <span class="tool-tag">Premiere Pro</span>
+              <span class="tool-tag">After Effects</span>
+              <span class="tool-tag">DaVinci Resolve</span>
+              <span class="tool-tag">Cinema 4D</span>
+              <span class="tool-tag">Final Cut Pro</span>
+              <span class="tool-tag">Nuke</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERTISE
+  ============================================================ -->
+  <section class="expertise section" id="expertise">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">— Expertise</p>
+        <h2 class="section__title">Trois disciplines.<br /><span class="accent">Une obsession</span> de l'excellence.</h2>
+      </div>
+
+      <div class="expertise__grid">
+
+        <!-- Card 1 : Motion Design -->
+        <article class="expertise__card" data-index="01">
+          <div class="expertise__card-icon">
+            <!-- Icône SVG inline : abstrait motion -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M11.3 11.3l5.66 5.66M31.04 31.04l5.66 5.66M11.3 36.7l5.66-5.66M31.04 17l5.66-5.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="expertise__card-title">Motion Design Avancé</h3>
+          <p class="expertise__card-desc">
+            Animations cinématiques complexes, typographie animée, identités en mouvement 
+            et effets visuels intégrés. Du storyboard au rendu final.
+          </p>
+          <ul class="expertise__card-list">
+            <li>Brand animations &amp; identité visuelle</li>
+            <li>Title sequences cinématiques</li>
+            <li>Infographies dynamiques</li>
+            <li>VFX compositing</li>
+          </ul>
+          <div class="expertise__card-number">01</div>
+        </article>
+
+        <!-- Card 2 : Publicités -->
+        <article class="expertise__card expertise__card--featured" data-index="02">
+          <div class="expertise__card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M20 19l10 5-10 5V19z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="expertise__card-title">Publicités Digitales</h3>
+          <p class="expertise__card-desc">
+            Annonces vidéo orientées conversion pour Meta, YouTube et TikTok. 
+            Je conjugue narration émotionnelle et psychologie de l'achat pour 
+            maximiser le ROI de vos campagnes.
+          </p>
+          <ul class="expertise__card-list">
+            <li>Performance ads (Meta · YouTube)</li>
+            <li>Hook creation &amp; attention design</li>
+            <li>A/B testing visuel</li>
+            <li>Brand story &amp; product demo</li>
+          </ul>
+          <div class="expertise__card-number">02</div>
+        </article>
+
+        <!-- Card 3 : Documentaires -->
+        <article class="expertise__card" data-index="03">
+          <div class="expertise__card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 12h32M8 24h24M8 36h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="38" cy="32" r="6" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M42 36l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="expertise__card-title">Documentaires Cinématographiques</h3>
+          <p class="expertise__card-desc">
+            Du court-métrage au long format, je construis des arcs narratifs 
+            qui captivent de la première à la dernière seconde. Color grading 
+            expressif et sound design soigné.
+          </p>
+          <ul class="expertise__card-list">
+            <li>Montage narratif long format</li>
+            <li>Color grading cinématique</li>
+            <li>Interviews &amp; séquences terrain</li>
+            <li>Festivals &amp; diffusion internationale</li>
+          </ul>
+          <div class="expertise__card-number">03</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RÉALISATIONS / PORTFOLIO
+  ============================================================ -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">— Réalisations</p>
+        <h2 class="section__title">Projets <span class="accent">sélectionnés</span>.</h2>
+      </div>
+
+      <!-- Filtres -->
+      <div class="work__filters" role="tablist">
+        <button class="filter-btn filter-btn--active" data-filter="all" role="tab">Tous</button>
+        <button class="filter-btn" data-filter="motion" role="tab">Motion</button>
+        <button class="filter-btn" data-filter="pub" role="tab">Publicités</button>
+        <button class="filter-btn" data-filter="doc" role="tab">Documentaires</button>
+      </div>
+
+      <!-- Grille projets -->
+      <div class="work__grid" id="work-grid">
+
+        <!-- Projet 1 : Showreel (pleine largeur) -->
+        <article class="work__item work__item--wide" data-category="motion">
+          <a href="https://youtu.be/FQlZBIBWpXY" target="_blank" rel="noopener" class="work__item-media work__item-media--thumb" aria-label="Voir Showreel 2026 sur YouTube">
+            <img
+              src="https://img.youtube.com/vi/FQlZBIBWpXY/maxresdefault.jpg"
+              alt="Showreel 2026 — KPOKAN Gomez"
+              class="work__thumb-img"
+              loading="lazy"
+            />
+            <div class="work__thumb-overlay">
+              <div class="work__play-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="work__thumb-label">Voir sur YouTube</span>
+            </div>
+          </a>
+          <div class="work__item-info">
+            <span class="work__item-cat">Showreel · Motion Design · Publicité</span>
+            <h3 class="work__item-title">Showreel 2026</h3>
+            <p class="work__item-desc">Sélection de mes meilleurs projets : publicités produit, animations 3D, vidéos promotionnelles et contenus optimisés pour les réseaux sociaux. Montage dynamique et animations orientées performance marketing.</p>
+            <a href="https://youtu.be/FQlZBIBWpXY" target="_blank" rel="noopener" class="work__item-link">Voir sur YouTube →</a>
+          </div>
+        </article>
+
+        <!-- Projet 2 : Agence digitale -->
+        <article class="work__item" data-category="pub">
+          <a href="https://youtu.be/Zpzr2ifh9oY" target="_blank" rel="noopener" class="work__item-media work__item-media--thumb" aria-label="Voir Vidéo Agence Digitale sur YouTube">
+            <img
+              src="https://img.youtube.com/vi/Zpzr2ifh9oY/maxresdefault.jpg"
+              alt="Vidéo Stratégique — Agence Digitale"
+              class="work__thumb-img"
+              loading="lazy"
+            />
+            <div class="work__thumb-overlay">
+              <div class="work__play-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="work__thumb-label">Voir sur YouTube</span>
+            </div>
+          </a>
+          <div class="work__item-info">
+            <span class="work__item-cat">Publicité Digitale · Motion Design</span>
+            <h3 class="work__item-title">Vidéo Stratégique — Agence Digitale</h3>
+            <p class="work__item-desc">Motion design conçu pour renforcer la visibilité et la crédibilité d'une agence. Animation de textes stratégiques, rythme dynamique et optimisation format Ads.</p>
+            <a href="https://youtu.be/Zpzr2ifh9oY" target="_blank" rel="noopener" class="work__item-link">Voir sur YouTube →</a>
+          </div>
+        </article>
+
+        <!-- Projet 3 : Pirabel Lab -->
+        <article class="work__item" data-category="pub">
+          <a href="https://youtu.be/COd6nbgbyDY" target="_blank" rel="noopener" class="work__item-media work__item-media--thumb" aria-label="Voir Pirabel Lab sur YouTube">
+            <img
+              src="https://img.youtube.com/vi/COd6nbgbyDY/maxresdefault.jpg"
+              alt="Vidéo Promotionnelle — Pirabel Lab"
+              class="work__thumb-img"
+              loading="lazy"
+            />
+            <div class="work__thumb-overlay">
+              <div class="work__play-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="work__thumb-label">Voir sur YouTube</span>
+            </div>
+          </a>
+          <div class="work__item-info">
+            <span class="work__item-cat">Publicité Digitale · Institutionnel</span>
+            <h3 class="work__item-title">Vidéo Promotionnelle — Pirabel Lab</h3>
+            <p class="work__item-desc">Présentation des services de l'agence web Pirabel Lab en motion design : concept créatif, animation graphique, transitions modernes et optimisation réseaux sociaux.</p>
+            <a href="https://youtu.be/COd6nbgbyDY" target="_blank" rel="noopener" class="work__item-link">Voir sur YouTube →</a>
+          </div>
+        </article>
+
+        <!-- Projet 4 : Publicité boisson -->
+        <article class="work__item" data-category="pub">
+          <a href="https://youtu.be/aaSmZxkhg-4" target="_blank" rel="noopener" class="work__item-media work__item-media--thumb" aria-label="Voir Publicité Boisson sur YouTube">
+            <img
+              src="https://img.youtube.com/vi/aaSmZxkhg-4/maxresdefault.jpg"
+              alt="Publicité Produit — Boisson"
+              class="work__thumb-img"
+              loading="lazy"
+            />
+            <div class="work__thumb-overlay">
+              <div class="work__play-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="work__thumb-label">Voir sur YouTube</span>
+            </div>
+          </a>
+          <div class="work__item-info">
+            <span class="work__item-cat">Publicité Produit · Motion Design</span>
+            <h3 class="work__item-title">Publicité Produit — Boisson</h3>
+            <p class="work__item-desc">Vidéo publicitaire en motion design pour la promotion d'une boisson. Rythme dynamique, animations modernes et mise en valeur stratégique du produit pour maximiser l'impact en campagne numérique.</p>
+            <a href="https://youtu.be/aaSmZxkhg-4" target="_blank" rel="noopener" class="work__item-link">Voir sur YouTube →</a>
+          </div>
+        </article>
+
+        <!-- Projet 5 : Montre NEXUS -->
+        <article class="work__item" data-category="motion">
+          <a href="https://youtu.be/UtXUTytVhNc" target="_blank" rel="noopener" class="work__item-media work__item-media--thumb" aria-label="Voir Montre NEXUS sur YouTube">
+            <img
+              src="https://img.youtube.com/vi/UtXUTytVhNc/maxresdefault.jpg"
+              alt="Montre NEXUS — Animation 3D"
+              class="work__thumb-img"
+              loading="lazy"
+            />
+            <div class="work__thumb-overlay">
+              <div class="work__play-btn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="work__thumb-label">Voir sur YouTube</span>
+            </div>
+          </a>
+          <div class="work__item-info">
+            <span class="work__item-cat">Animation 3D · Publicité Premium</span>
+            <h3 class="work__item-title">Montre NEXUS — Animation 3D</h3>
+            <p class="work__item-desc">Publicité en motion design mettant en scène la montre NEXUS en rotation 3D. Animation produit, textes dynamiques et visuels premium pour valoriser le positionnement haut de gamme de la marque.</p>
+            <a href="https://youtu.be/UtXUTytVhNc" target="_blank" rel="noopener" class="work__item-link">Voir sur YouTube →</a>
+          </div>
+        </article>
+
+      </div><!-- /.work__grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCESS
+  ============================================================ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">— Process</p>
+        <h2 class="section__title">De la vision<br /><span class="accent">au rendu final</span>.</h2>
+      </div>
+
+      <div class="process__steps">
+
+        <div class="process__step">
+          <div class="process__step-num">01</div>
+          <div class="process__step-line"></div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Brief &amp; Stratégie</h3>
+            <p class="process__step-desc">
+              Analyse des objectifs, de la cible et des indicateurs de succès. 
+              Je ne commence aucun projet sans une compréhension totale du «&nbsp;pourquoi&nbsp;».
+            </p>
+          </div>
+        </div>
+
+        <div class="process__step">
+          <div class="process__step-num">02</div>
+          <div class="process__step-line"></div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Storyboard &amp; Moodboard</h3>
+            <p class="process__step-desc">
+              Traduction créative du brief : direction visuelle, palette, rythme, 
+              références cinématiques validées avant la production.
+            </p>
+          </div>
+        </div>
+
+        <div class="process__step">
+          <div class="process__step-num">03</div>
+          <div class="process__step-line"></div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Montage &amp; Animation</h3>
+            <p class="process__step-desc">
+              Assemblage, motion design, son et effets visuels. 
+              Itérations rapides avec livrables intermédiaires pour validation client.
+            </p>
+          </div>
+        </div>
+
+        <div class="process__step">
+          <div class="process__step-num">04</div>
+          <div class="process__step-line process__step-line--last"></div>
+          <div class="process__step-content">
+            <h3 class="process__step-title">Livraison &amp; Optimisation</h3>
+            <p class="process__step-desc">
+              Export multi-formats (4K, web, mobile, broadcast). 
+              Suivi des performances post-lancement et ajustements si nécessaire.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TÉMOIGNAGES
+  ============================================================ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__tag">— Témoignages</p>
+        <h2 class="section__title">Ce que disent<br /><span class="accent">les clients</span>.</h2>
+      </div>
+
+      <div class="testimonials__grid">
+
+        <blockquote class="testimonial">
+          <p class="testimonial__text">
+            «&nbsp;KPOKAN a transformé notre campagne. En trois semaines, notre ROAS a doublé grâce 
+            à ses ads. Il comprend à la fois le langage créatif et la logique business.&nbsp;»
+          </p>
+          <footer class="testimonial__footer">
+            <div class="testimonial__avatar" aria-hidden="true">AM</div>
+            <div>
+              <cite class="testimonial__name">Amara Mensah</cite>
+              <span class="testimonial__role">CMO, Akara Skincare</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial testimonial--featured">
+          <p class="testimonial__text">
+            «&nbsp;Le documentaire qu'il a monté pour nous a été sélectionné dans trois festivals en 
+            moins de deux mois. Sa sensibilité narrative est exceptionnelle — chaque coupe a du sens.&nbsp;»
+          </p>
+          <footer class="testimonial__footer">
+            <div class="testimonial__avatar" aria-hidden="true">SK</div>
+            <div>
+              <cite class="testimonial__name">Seun Kadri</cite>
+              <span class="testimonial__role">Réalisatrice, Studio Éclipse</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p class="testimonial__text">
+            «&nbsp;Notre brand film a généré 2,4M vues en une semaine sans budget paid. 
+            KPOKAN a su capturer l'essence de notre marque dans 60 secondes.&nbsp;»
+          </p>
+          <footer class="testimonial__footer">
+            <div class="testimonial__avatar" aria-hidden="true">KA</div>
+            <div>
+              <cite class="testimonial__name">Kofi Asante</cite>
+              <span class="testimonial__role">Fondateur, Kofi Apparel</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT / CTA FINAL
+  ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="contact__bg">
+      <div class="contact__glow"></div>
+    </div>
+    <div class="container">
+      <div class="contact__inner">
+
+        <div class="contact__headline">
+          <p class="section__tag">— Contact</p>
+          <h2 class="contact__title">
+            Prêt à créer<br />quelque chose<br /><span class="accent">d'inoubliable&nbsp;?</span>
+          </h2>
+          <p class="contact__subtitle">
+            Que ce soit un film publicitaire, un documentaire ou une animation, 
+            discutons de votre projet.
+          </p>
+        </div>
+
+        <form class="contact__form" id="contact-form" action="https://formspree.io/f/xwvnrojz" method="POST" novalidate>
+          <div class="form__group">
+            <label class="form__label" for="name">Nom complet</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Jean Dupont" required autocomplete="name" />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="jean@example.com" required autocomplete="email" />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="project-type">Type de projet</label>
+            <select class="form__input form__select" id="project-type" name="project-type">
+              <option value="">Sélectionner...</option>
+              <option value="motion">Motion Design</option>
+              <option value="pub">Publicité Digitale</option>
+              <option value="doc">Documentaire</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form__group form__group--full">
+            <label class="form__label" for="message">Décrivez votre projet</label>
+            <textarea class="form__input form__textarea" id="message" name="message" rows="4" placeholder="Parlez-moi de votre vision, vos objectifs, votre timeline..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large">Envoyer le message →</button>
+        </form>
+
+        <!-- Liens directs -->
+        <div class="contact__direct">
+          <p class="contact__direct-label">Ou directement :</p>
+          <a href="/cdn-cgi/l/email-protection#395249565258575e56545c43795e54585055175a5654" class="contact__link"><span class="__cf_email__" data-cfemail="6308130c08020d040c0e061923040e020a0f4d000c0e">[email&#160;protected]</span></a>
+          <div class="contact__socials">
+            <a href="https://www.instagram.com/bignongomez970/" target="_blank" rel="noopener" class="contact__social" aria-label="Instagram">
+              <!-- Instagram -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/search/top?q=Kpokan%20gomez" target="_blank" rel="noopener" class="contact__social" aria-label="Facebook">
+              <!-- Facebook -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@billkpokan1816" target="_blank" rel="noopener" class="contact__social" aria-label="YouTube">
+              <!-- YouTube -->
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#080a0f"/>
+              </svg>
+            </a>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <span class="footer__logo">KPOKAN Gomez</span>
+          <p class="footer__tagline">Monteur vidéo · Motion Designer · Storyteller</p>
+        </div>
+        <nav class="footer__nav" aria-label="Navigation pied de page">
+          <a href="#about">À propos</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#work">Travaux</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer__copy">© 2025 KPOKAN Gomez. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT INLINE (minimal, aucune dépendance)
+  ============================================================ -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    /* --- Curseur personnalisé --- */
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursor-follower');
+    let mx = 0, my = 0, fx = 0, fy = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.transform = `translate(${mx}px, ${my}px)`;
+    });
+
+    function animateFollower() {
+      fx += (mx - fx) * 0.12;
+      fy += (my - fy) * 0.12;
+      follower.style.transform = `translate(${fx}px, ${fy}px)`;
+      requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+
+    /* Hover effect sur liens */
+    document.querySelectorAll('a, button, .work__item').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('cursor--hover'); follower.classList.add('cursor--hover'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('cursor--hover'); follower.classList.remove('cursor--hover'); });
+    });
+
+    /* --- Navigation scroll --- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* --- Menu burger mobile --- */
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      const open = navToggle.classList.toggle('nav__toggle--open');
+      navLinks.classList.toggle('nav__links--open', open);
+      navToggle.setAttribute('aria-expanded', open);
+    });
+
+    /* Fermer le menu au clic sur un lien */
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('nav__toggle--open');
+        navLinks.classList.remove('nav__links--open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* --- Filtre portfolio --- */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workItems = document.querySelectorAll('.work__item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+        btn.classList.add('filter-btn--active');
+        const filter = btn.dataset.filter;
+        workItems.forEach(item => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.style.opacity = show ? '1' : '0';
+          item.style.pointerEvents = show ? 'auto' : 'none';
+          item.style.transform = show ? 'scale(1)' : 'scale(0.95)';
+        });
+      });
+    });
+
+    /* --- Intersection Observer : animations au scroll --- */
+    const observerOpts = { threshold: 0.12 };
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOpts);
+
+    document.querySelectorAll(
+      '.expertise__card, .work__item, .process__step, .testimonial, .about__grid'
+    ).forEach(el => observer.observe(el));
+
+    /* --- Compteurs animés --- */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const step = 16;
+      const increment = target / (duration / step);
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.floor(current) + suffix;
+      }, step);
+    }
+
+    /* Déclencher les compteurs quand ils entrent dans le viewport */
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+    document.getElementById('contact-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+
+      btn.textContent = 'Envoi en cours...';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          btn.textContent = 'Message envoyé ✓';
+          btn.style.background = '#22c55e';
+          btn.style.borderColor = '#22c55e';
+          form.reset();
+        } else {
+          btn.textContent = 'Erreur — réessaie';
+          btn.style.background = '#ef4444';
+          btn.disabled = false;
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+            btn.disabled = false;
+          }, 3000);
+        }
+      } catch {
+        btn.textContent = 'Erreur réseau';
+        btn.disabled = false;
+        setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 3000);
+      }
+    });
+
+  </script>
+
+</body>
+</html>
